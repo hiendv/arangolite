@@ -274,10 +274,10 @@ func (c *ImportCollection) Description() string {
 
 func (c *ImportCollection) Path() string {
 	if c.OnDuplicate != "" {
-		return "/_api/import/?type=auto&onDuplicate=" + c.OnDuplicate + "&collection=" + c.CollectionName
+		return "/_api/import/?type=auto&details=true&onDuplicate=" + c.OnDuplicate + "&collection=" + c.CollectionName
 	}
 
-	return "/_api/import/?type=auto&collection=" + c.CollectionName
+	return "/_api/import/?type=auto&details=true&collection=" + c.CollectionName
 }
 
 func (c *ImportCollection) Method() string {
